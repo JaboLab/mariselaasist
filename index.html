@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mariselasist - Asistente Virtual</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 0;
+    }
+    .info {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+      text-align: center;
+      max-width: 600px;
+    }
+    #webchat {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 500px;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido a Mariselasist</h1>
+  <p class="info">Tu asistente virtual sobre la historia de las mujeres en México. Haz tu pregunta en el chat a continuación.</p>
+
+  <div id="webchat" style="width: 100%; height: 500px;"></div>
+
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+  <script>
+    window.botpress.init({
+      botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
+      clientId: "da334d94-67c6-4839-9581-e08e908587f0",
+      selector: "#webchat",
+      configuration: {
+        version: "v1",
+        themeMode: "light",
+        color: "#3276EA",
+        radius: 4,
+        headerVariant: "glass",
+        feedbackEnabled: false,
+        footer: "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+      }
+    });
+  </script>
+</body>
+</html>
