@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mariselasist - Asistente Virtual</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://botpress.com/favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 0;
+    }
+    .info {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+      text-align: center;
+      max-width: 600px;
+    }
+    /* Botpress full‑frame overrides */
+    #webchat .bpWebchat {
+      position: unset;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+    #webchat .bpFab {
+      display: none;
+    }
+  </style>
+  <!-- Botpress inject script -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+</head>
+<body>
+  <h1>Bienvenido a Mariselasist</h1>
+  <p class="info">Tu asistente virtual sobre la historia de las mujeres en México. Haz tu pregunta en el chat a continuación.</p>
+
+  <!-- Webchat container -->
+  <div id="webchat" style="width: 500px; height: 500px; margin-top: 20px;"></div>
+
+  <!-- Botpress init script -->
+  <script>
+    window.botpress.on("webchat:ready", () => {
+      window.botpress.open();
+    });
+    window.botpress.init({
+      "botId": "9a061772-77cf-43e5-9710-625ee67fbe0f",
+      "configuration": {
+        "version": "v1",
+        "website": {},
+        "email": {},
+        "phone": {},
+        "termsOfService": {},
+        "privacyPolicy": {},
+        "color": "#3276EA",
+        "variant": "solid",
+        "headerVariant": "glass",
+        "themeMode": "light",
+        "fontFamily": "inter",
+        "radius": 4,
+        "feedbackEnabled": false,
+        "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+      },
+      "clientId": "da334d94-67c6-4839-9581-e08e908587f0",
+      "selector": "#webchat"
+    });
+  </script>
+</body>
+</html>
